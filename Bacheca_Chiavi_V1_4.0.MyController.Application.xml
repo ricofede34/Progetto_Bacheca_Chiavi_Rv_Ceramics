@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Symbolconfiguration xmlns="http://www.3s-software.com/schemas/Symbolconfiguration.xsd">
+  <Header>
+    <Version>3.5.14.0</Version>
+    <SymbolConfigObject version="3.5.16.30" runtimeid="3.5.16.90" libversion="3.5.16.0" compiler="3.5.16.90" lmm="3.5.16.0" profile="V21.0.22.0" settings="LayoutCalculator=OptimizedClientSideLayoutCalculator" />
+    <ProjectInfo name="Bacheca_Chiavi_V1_4.0" devicename="MyController" appname="Application" />
+  </Header>
+  <TypeList>
+    <TypeSimple name="T_BOOL" size="1" swapsize="0" typeclass="Bool" iecname="BOOL" />
+    <TypeSimple name="T_BYTE" size="1" swapsize="1" typeclass="Byte" iecname="BYTE" />
+    <TypeSimple name="T_DINT" size="4" swapsize="4" typeclass="DInt" iecname="DINT" />
+    <TypeSimple name="T_STRING" size="81" swapsize="0" typeclass="String" iecname="STRING" />
+    <TypeSimple name="T_STRING_10_" size="11" swapsize="0" typeclass="String" iecname="STRING(10)" />
+    <TypeSimple name="T_STRING_30_" size="31" swapsize="0" typeclass="String" iecname="STRING(30)" />
+    <TypeSimple name="T_STRING_4_" size="5" swapsize="0" typeclass="String" iecname="STRING(4)" />
+    <TypeSimple name="T_STRING_7_" size="8" swapsize="0" typeclass="String" iecname="STRING(7)" />
+    <TypeSimple name="T_UINT" size="2" swapsize="2" typeclass="UInt" iecname="UINT" />
+    <TypeArray name="T_ARRAY__0__2__OF_BOOL" size="3" nativesize="3" typeclass="Array" iecname="ARRAY [0..2] OF BOOL" basetype="T_BOOL">
+      <ArrayDim minrange="0" maxrange="2" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__4__0__8__OF_BOOL" size="45" nativesize="45" typeclass="Array" iecname="ARRAY [0..4, 0..8] OF BOOL" basetype="T_BOOL">
+      <ArrayDim minrange="0" maxrange="4" />
+      <ArrayDim minrange="0" maxrange="8" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__4__OF_BOOL" size="5" nativesize="5" typeclass="Array" iecname="ARRAY [0..4] OF BOOL" basetype="T_BOOL">
+      <ArrayDim minrange="0" maxrange="4" />
+    </TypeArray>
+    <TypeUserDef name="T_Chiave" size="21" nativesize="36" typeclass="Userdef" pouclass="STRUCTURE" iecname="Chiave">
+      <UserDefElement iecname="Id" type="T_BYTE" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Targa" type="T_STRING_7_" byteoffset="1" vartype="VAR" />
+      <UserDefElement iecname="Modello" type="T_STRING_10_" byteoffset="9" vartype="VAR" />
+      <UserDefElement iecname="disponibile" type="T_BOOL" byteoffset="20" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Consegne_Query" size="90" nativesize="90" typeclass="Userdef" pouclass="STRUCTURE" iecname="Consegne_Query">
+      <UserDefElement iecname="Id_chiave" type="T_BYTE" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Id_Utente" type="T_BYTE" byteoffset="1" vartype="VAR" />
+      <UserDefElement iecname="Cognome" type="T_STRING" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="Anno" type="T_UINT" byteoffset="84" vartype="VAR" />
+      <UserDefElement iecname="Mese" type="T_BYTE" byteoffset="86" vartype="VAR" />
+      <UserDefElement iecname="Giorno" type="T_BYTE" byteoffset="87" vartype="VAR" />
+      <UserDefElement iecname="Ora" type="T_BYTE" byteoffset="88" vartype="VAR" />
+      <UserDefElement iecname="Minuti" type="T_BYTE" byteoffset="89" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Giorno_Calendario" size="6" nativesize="6" typeclass="Userdef" pouclass="STRUCTURE" iecname="Giorno_Calendario">
+      <UserDefElement iecname="Id_Chiave" type="T_BYTE" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Id_User" type="T_BYTE" byteoffset="1" vartype="VAR" />
+      <UserDefElement iecname="Anno" type="T_UINT" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="Mese" type="T_BYTE" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="Giorno" type="T_BYTE" byteoffset="5" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Prelievo" size="5" nativesize="5" typeclass="Userdef" pouclass="STRUCTURE" iecname="Prelievo">
+      <UserDefElement iecname="Id_Chave" type="T_BYTE" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="User" type="T_BYTE" byteoffset="1" vartype="VAR" />
+      <UserDefElement iecname="Giorno" type="T_BYTE" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="Ora" type="T_BYTE" byteoffset="3" vartype="VAR" />
+      <UserDefElement iecname="Minuti" type="T_BYTE" byteoffset="4" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Prelievo_Query" size="90" nativesize="90" typeclass="Userdef" pouclass="STRUCTURE" iecname="Prelievo_Query">
+      <UserDefElement iecname="Id_Chave" type="T_BYTE" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="User" type="T_BYTE" byteoffset="1" vartype="VAR" />
+      <UserDefElement iecname="Cognome" type="T_STRING" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="Anno" type="T_UINT" byteoffset="84" vartype="VAR" />
+      <UserDefElement iecname="Mese" type="T_BYTE" byteoffset="86" vartype="VAR" />
+      <UserDefElement iecname="Giorno" type="T_BYTE" byteoffset="87" vartype="VAR" />
+      <UserDefElement iecname="Ora" type="T_BYTE" byteoffset="88" vartype="VAR" />
+      <UserDefElement iecname="Minuti" type="T_BYTE" byteoffset="89" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Utente" size="49" nativesize="49" typeclass="Userdef" pouclass="STRUCTURE" iecname="Utente">
+      <UserDefElement iecname="Id" type="T_BYTE" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Cognome" type="T_STRING_10_" byteoffset="1" vartype="VAR" />
+      <UserDefElement iecname="pin" type="T_STRING_4_" byteoffset="12" vartype="VAR" />
+      <UserDefElement iecname="ruolo" type="T_BOOL" byteoffset="17" vartype="VAR" />
+      <UserDefElement iecname="email" type="T_STRING_30_" byteoffset="18" vartype="VAR" />
+    </TypeUserDef>
+    <TypeArray name="T_ARRAY__0__31__OF_Giorno_Calendario" size="192" nativesize="192" typeclass="Array" iecname="ARRAY [0..31] OF Giorno_Calendario" basetype="T_Giorno_Calendario">
+      <ArrayDim minrange="0" maxrange="31" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__32__OF_Utente" size="1617" nativesize="1617" typeclass="Array" iecname="ARRAY [0..32] OF Utente" basetype="T_Utente">
+      <ArrayDim minrange="0" maxrange="32" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__4__0__8__OF_Chiave" size="945" nativesize="1620" typeclass="Array" iecname="ARRAY [0..4, 0..8] OF Chiave" basetype="T_Chiave">
+      <ArrayDim minrange="0" maxrange="4" />
+      <ArrayDim minrange="0" maxrange="8" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__5__OF_Consegne_Query" size="540" nativesize="540" typeclass="Array" iecname="ARRAY [0..5] OF Consegne_Query" basetype="T_Consegne_Query">
+      <ArrayDim minrange="0" maxrange="5" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__5__OF_Prelievo_Query" size="540" nativesize="540" typeclass="Array" iecname="ARRAY [0..5] OF Prelievo_Query" basetype="T_Prelievo_Query">
+      <ArrayDim minrange="0" maxrange="5" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__5__OF_Utente" size="294" nativesize="294" typeclass="Array" iecname="ARRAY [0..5] OF Utente" basetype="T_Utente">
+      <ArrayDim minrange="0" maxrange="5" />
+    </TypeArray>
+  </TypeList>
+  <NodeList>
+    <Node name="Application">
+      <Node name="GVL">
+        <Node name="Alarm" type="T_BOOL" access="ReadWrite" />
+        <Node name="Bottone_Conferma" type="T_BOOL" access="ReadWrite" />
+        <Node name="Selezione_Sp" type="T_ARRAY__0__2__OF_BOOL" access="ReadWrite" />
+        <Node name="Uscite" type="T_ARRAY__0__4__OF_BOOL" access="ReadWrite" />
+      </Node>
+      <Node name="GVL_DATA_ORA">
+        <Node name="Lett_Anno" type="T_UINT" access="ReadWrite" />
+        <Node name="Lett_Giorno" type="T_UINT" access="ReadWrite" />
+        <Node name="Lett_Mese" type="T_UINT" access="ReadWrite" />
+        <Node name="Lett_Minuti" type="T_UINT" access="ReadWrite" />
+        <Node name="Lett_Ora" type="T_UINT" access="ReadWrite" />
+        <Node name="Lett_Secondi" type="T_UINT" access="ReadWrite" />
+      </Node>
+      <Node name="GVL_HMI">
+        <Node name="anno2_temp" type="T_UINT" access="ReadWrite" />
+        <Node name="anno_Query" type="T_UINT" access="ReadWrite" />
+        <Node name="anno_temp" type="T_UINT" access="ReadWrite" />
+        <Node name="Assicurazione_aa_temp" type="T_UINT" access="ReadWrite" />
+        <Node name="Assicurazione_gg_temp" type="T_BYTE" access="ReadWrite" />
+        <Node name="Assicurazione_mm_temp" type="T_BYTE" access="ReadWrite" />
+        <Node name="bollo_aa_temp" type="T_UINT" access="ReadWrite" />
+        <Node name="bollo_gg_temp" type="T_BYTE" access="ReadWrite" />
+        <Node name="bollo_mm_temp" type="T_BYTE" access="ReadWrite" />
+        <Node name="Calendario" type="T_ARRAY__0__31__OF_Giorno_Calendario" access="ReadWrite" />
+        <Node name="Calendario2" type="T_ARRAY__0__31__OF_Giorno_Calendario" access="ReadWrite" />
+        <Node name="Cognome_temp" type="T_STRING" access="ReadWrite" />
+        <Node name="CurrentPanel" type="T_DINT" access="ReadWrite" />
+        <Node name="EPA" type="T_ARRAY__0__32__OF_Utente" access="ReadWrite" />
+        <Node name="giorno2_temp" type="T_BYTE" access="ReadWrite" />
+        <Node name="giorno_Query" type="T_BYTE" access="ReadWrite" />
+        <Node name="giorno_temp" type="T_BYTE" access="ReadWrite" />
+        <Node name="Id_chiave_query" type="T_BYTE" access="ReadWrite" />
+        <Node name="id_chiave_selezionata" type="T_BYTE" access="ReadWrite" />
+        <Node name="Id_chiave_temp" type="T_BYTE" access="ReadWrite" />
+        <Node name="Id_temp" type="T_BYTE" access="ReadWrite" />
+        <Node name="Id_User_Query" type="T_BYTE" access="ReadWrite" />
+        <Node name="Id_user_temp" type="T_BYTE" access="ReadWrite" />
+        <Node name="mail_temp" type="T_STRING" access="ReadWrite" />
+        <Node name="mese2_temp" type="T_BYTE" access="ReadWrite" />
+        <Node name="mese_Query" type="T_BYTE" access="ReadWrite" />
+        <Node name="mese_temp" type="T_BYTE" access="ReadWrite" />
+        <Node name="Modello_temp" type="T_STRING_10_" access="ReadWrite" />
+        <Node name="OperazioneFile" type="T_BYTE" access="ReadWrite" />
+        <Node name="pin_temp" type="T_STRING" access="ReadWrite" />
+        <Node name="posx" type="T_BYTE" access="ReadWrite" />
+        <Node name="posy" type="T_BYTE" access="ReadWrite" />
+        <Node name="Prelievo_temp" type="T_Prelievo" access="ReadWrite" />
+        <Node name="revisione_aa_temp" type="T_UINT" access="ReadWrite" />
+        <Node name="revisione_gg_temp" type="T_BYTE" access="ReadWrite" />
+        <Node name="revisione_mm_temp" type="T_BYTE" access="ReadWrite" />
+        <Node name="RisultatiQueryConsegne" type="T_ARRAY__0__5__OF_Consegne_Query" access="ReadWrite" />
+        <Node name="RisultatiQueryPrelievi" type="T_ARRAY__0__5__OF_Prelievo_Query" access="ReadWrite" />
+        <Node name="RisultatiQueryUtenti" type="T_ARRAY__0__5__OF_Utente" access="ReadWrite" />
+        <Node name="Ruolo_temp" type="T_BOOL" access="ReadWrite" />
+        <Node name="Ruolo_user_Autorizzato" type="T_BOOL" access="ReadWrite" />
+        <Node name="salvataggioStato" type="T_BOOL" access="ReadWrite" />
+        <Node name="SetPanel" type="T_DINT" access="ReadWrite" />
+        <Node name="Targa_temp" type="T_STRING_7_" access="ReadWrite" />
+        <Node name="User_Autorizzato" type="T_BYTE" access="ReadWrite" />
+        <Node name="Utente_temp" type="T_Utente" access="ReadWrite" />
+        <Node name="xAutorizzazione" type="T_BOOL" access="ReadWrite" />
+        <Node name="xButtonExport" type="T_BOOL" access="ReadWrite" />
+        <Node name="xCambioAssicurazione" type="T_BOOL" access="ReadWrite" />
+        <Node name="xCambioBollo" type="T_BOOL" access="ReadWrite" />
+        <Node name="xCambioRevisione" type="T_BOOL" access="ReadWrite" />
+        <Node name="xCercaDoc" type="T_BOOL" access="ReadWrite" />
+        <Node name="xChiaveCreata" type="T_BOOL" access="ReadWrite" />
+        <Node name="xCompleteImport" type="T_BOOL" access="ReadWrite" />
+        <Node name="xCreazioneChiave" type="T_BOOL" access="ReadWrite" />
+        <Node name="xCreazionePrenotazione" type="T_BOOL" access="ReadWrite" />
+        <Node name="xCreazioneUtente" type="T_BOOL" access="ReadWrite" />
+        <Node name="xDocTrovati" type="T_BOOL" access="ReadWrite" />
+        <Node name="xEI_Dati" type="T_BOOL" access="ReadWrite" />
+        <Node name="xEliminazioneAvvenuta" type="T_BOOL" access="ReadWrite" />
+        <Node name="XEliminazioneChiave" type="T_BOOL" access="ReadWrite" />
+        <Node name="xEliminazioneUtente" type="T_BOOL" access="ReadWrite" />
+        <Node name="xEPA" type="T_BOOL" access="ReadWrite" />
+        <Node name="xFlagIE_Error" type="T_BOOL" access="ReadWrite" />
+        <Node name="xLogIn" type="T_BOOL" access="ReadWrite" />
+        <Node name="xLogOut" type="T_BOOL" access="ReadWrite" />
+        <Node name="xModificaDocumenti" type="T_BOOL" access="ReadWrite" />
+        <Node name="xPersistentExport" type="T_BOOL" access="ReadWrite" />
+        <Node name="xPersistentImport" type="T_BOOL" access="ReadWrite" />
+        <Node name="xRicercaCollegata" type="T_BOOL" access="ReadWrite" />
+        <Node name="xRicercaConsegne" type="T_BOOL" access="ReadWrite" />
+        <Node name="xRicercaPrelievi" type="T_BOOL" access="ReadWrite" />
+        <Node name="xRicercaPrenotazioni" type="T_BOOL" access="ReadWrite" />
+        <Node name="xRicercaUtenti" type="T_BOOL" access="ReadWrite" />
+        <Node name="xRichiestaSalvataggioC" type="T_BOOL" access="ReadWrite" />
+        <Node name="xRichiestaSalvataggioP" type="T_BOOL" access="ReadWrite" />
+        <Node name="xScorrimentoGiu" type="T_BOOL" access="ReadWrite" />
+        <Node name="xScorrimentoSu" type="T_BOOL" access="ReadWrite" />
+        <Node name="xSportelli" type="T_BOOL" access="ReadWrite" />
+        <Node name="xSportelliA" type="T_BOOL" access="ReadWrite" />
+        <Node name="xSportelliB" type="T_BOOL" access="ReadWrite" />
+      </Node>
+      <Node name="PersistentVars">
+        <Node name="Database_chiavi" type="T_ARRAY__0__4__0__8__OF_Chiave" access="ReadWrite" />
+        <Node name="last_id_user" type="T_BYTE" access="ReadWrite" />
+        <Node name="StatoSelettori_temp" type="T_ARRAY__0__4__0__8__OF_BOOL" access="ReadWrite" />
+        <Node name="xAbilitazioneNotifiche" type="T_BOOL" access="ReadWrite" />
+      </Node>
+    </Node>
+  </NodeList>
+</Symbolconfiguration>
